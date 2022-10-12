@@ -23,7 +23,9 @@ if (MyCoolRegex().IsMatch(text)) { ... }
 
 `dotnet-trace` output:
 
-![RegexOptions.Compiled](docs/RegexOptionsCompiled.png)
+![RegexOptions.Compiled](docs/CCtorBefore.png)
+
+![IsMatch Before](docs/IsMatchBefore.png)
 
 Startup time on a Pixel 5 device, average of 10 runs:
 
@@ -34,6 +36,13 @@ Std Dev(ms): 7.54909854809757
 ```
 
 ## After (`[GeneratedRegex]`)
+
+Note that now the static constructor of `MainActivity` is now so fast
+that it does not show up in traces at all anymore.
+
+`dotnet-trace` output:
+
+![IsMatch After](docs/IsMatchAfter.png)
 
 Startup time on a Pixel 5 device, average of 10 runs:
 
