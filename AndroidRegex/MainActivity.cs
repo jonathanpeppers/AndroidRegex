@@ -10,7 +10,7 @@ namespace AndroidRegex
 	{
 		private static readonly Regex s_myCoolRegex =
 #if FAST_REGEX
-            MyCoolRegex();
+			MyCoolRegex();
 #else
 			new("abc|def", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 #endif
@@ -34,7 +34,7 @@ namespace AndroidRegex
 		}
 
 #if FAST_REGEX
-        [GeneratedRegex("abc|def", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
+		[GeneratedRegex("abc|def", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
 		private static partial Regex MyCoolRegex();
 #endif
 	}
