@@ -2,6 +2,8 @@
 
 Testing .NET 7 `Regex` on Android.
 
+For details, see: https://devblogs.microsoft.com/dotnet/regular-expression-improvements-in-dotnet-7/
+
 ```csharp
 private static readonly Regex s_myCoolRegex = new Regex("abc|def", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 ...
